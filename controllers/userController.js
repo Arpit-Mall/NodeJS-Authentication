@@ -90,7 +90,6 @@ module.exports.signin = async (req, res) => {
 // password reset functionality
 module.exports.reset = async (req, res) => {
     const { email, oldpassword, newpassword } = req.body
-    console.log(newpassword);
 
     const user = await User.findOne({ email });
     if (!user) {
